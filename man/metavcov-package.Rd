@@ -10,11 +10,12 @@ Min Lu (Maintainer,<m.lu6@umiami.edu>)
 }
 
 \references{
-    \tabular{l}{
-Ahn, S., Lu, M., Lefevor, G.T., Fedewa, A. and Celimli, S. (2016). Chapter 11. Application of meta analysis in sport and exercise science. (pp. 233 253) In Ntoumanis, N. and Myers, N. (Eds.), An Introduction to Intermediate and Advanced Statistical Analyses for Sport and Exercise Scientists. John Wiley and Sons, Ltd.\cr
-Olkin, Ingram. Asymptotic distribution of functions of a correlation matrix. Essays in provability and statistics: A volume in honor of Professor Junjiro Ogawa (1976).\cr
-Wei, Yinghui, and Julian Higgins. Estimating within study covariances in multivariate meta analysis with multiple outcomes. Statistics in Medicine 32.7 (2013): 1191 1205.\cr
-}}
+Ahn, S., Lu, M., Lefevor, G.T., Fedewa, A. and Celimli, S. (2016). Chapter 11. Application of meta analysis in sport and exercise science. (pp. 233 253) In Ntoumanis, N. and Myers, N. (Eds.), An Introduction to Intermediate and Advanced Statistical Analyses for Sport and Exercise Scientists. John Wiley and Sons, Ltd.
+
+Olkin, Ingram. Asymptotic distribution of functions of a correlation matrix. Essays in provability and statistics: A volume in honor of Professor Junjiro Ogawa (1976).
+
+Wei, Yinghui, and Julian Higgins. Estimating within study covariances in multivariate meta analysis with multiple outcomes. Statistics in Medicine 32.7 (2013): 1191 1205.
+}
 
 \examples{
 ###############################################
@@ -28,7 +29,7 @@ computvocv=r.vcov(n=Craft2003$N,
 Input =computvocv$zr
 # name variance covariance matrix of trnasformed z scores as covars
 covars = computvocv$zcov
-# Next step: Overall analysis: Running random effects model 
+# Next step: Overall analysis: Running random effects model
 #                              using package "mvmeta"
 #library(mvmeta)
 #mvmeta_RE = summary(mvmeta(cbind(C1,C2,C3,C4,C5,C6),

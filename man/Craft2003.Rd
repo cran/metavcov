@@ -28,9 +28,9 @@ C6 \tab Correlation coefficient between self concept and athletic performance \c
   data(Craft2003)
 }
 \source{
-\tabular{l}{
-Ahn, S., Lu, M., Lefevor, G.T., Fedewa, A. and Celimli, S. (2016). Chapter 11. Application of meta-analysis in sport and exercise science. (pp. 233 253) In Ntoumanis, N. and Myers, N. (Eds.), An Introduction to Intermediate and Advanced Statistical Analyses for Sport and Exercise Scientists. John Wiley and Sons, Ltd.\cr
-Cooper, Harris, Larry V. Hedges, and Jeffrey C. Valentine, eds. The handbook of research synthesis and meta analysis. Russell Sage Foundation, 2009.\cr}
+Ahn, S., Lu, M., Lefevor, G.T., Fedewa, A. and Celimli, S. (2016). Chapter 11. Application of meta-analysis in sport and exercise science. (pp. 233 253) In Ntoumanis, N. and Myers, N. (Eds.), An Introduction to Intermediate and Advanced Statistical Analyses for Sport and Exercise Scientists. John Wiley and Sons, Ltd.
+
+Cooper, Harris, Larry V. Hedges, and Jeffrey C. Valentine, eds. The handbook of research synthesis and meta analysis. Russell Sage Foundation, 2009.
 }
 
 

@@ -28,9 +28,9 @@ rd.vcov(r,nt,nc,st,sc,n_rt=0,n_rc=0)
 
 
 \references{
-\tabular{l}{
-Ahn, S., Lu, M., Lefevor, G.T., Fedewa, A. and Celimli, S. (2016). Chapter 11. Application of meta-analysis in sport and exercise science. (pp. 233 253) In Ntoumanis, N. and Myers, N. (Eds.), An Introduction to Intermediate and Advanced Statistical Analyses for Sport and Exercise Scientists. John Wiley and Sons, Ltd.\cr
-Wei, Yinghui, and Julian Higgins. Estimating within study covariances in multivariate meta analysis with multiple outcomes. Statistics in Medicine 32.7 (2013): 1191 1205.\cr}
+Ahn, S., Lu, M., Lefevor, G.T., Fedewa, A. and Celimli, S. (2016). Chapter 11. Application of meta-analysis in sport and exercise science. (pp. 233 253) In Ntoumanis, N. and Myers, N. (Eds.), An Introduction to Intermediate and Advanced Statistical Analyses for Sport and Exercise Scientists. John Wiley and Sons, Ltd.
+
+Wei, Yinghui, and Julian Higgins. Estimating within study covariances in multivariate meta analysis with multiple outcomes. Statistics in Medicine 32.7 (2013): 1191 1205.
 }
 
 \examples{
