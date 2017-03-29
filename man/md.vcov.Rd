@@ -8,7 +8,7 @@ Min Lu
 md.vcov(r,nt,nc,n_rt=0,n_rc=0,sdt,sdc)
 }
 \description{
- Compute variance-covariance matrix for multivariate meta-analysis when effect size is mean difference.
+Compute variance-covariance matrix for multivariate meta-analysis when effect size is mean difference.
 }
 \arguments{
 \item{r }{A list of correlation coefficient matrices of the outcomes from the studies. r[[k]][i,j] is the correlation coefficient between outcome i and outcome j from study k.}
@@ -27,9 +27,9 @@ md.vcov(r,nt,nc,n_rt=0,n_rc=0,sdt,sdc)
 
 
 \references{
-Ahn, S., Lu, M., Lefevor, G.T., Fedewa, A. and Celimli, S. (2016). Chapter 11. Application of meta-analysis in sport and exercise science. (pp. 233 253) In Ntoumanis, N. and Myers, N. (Eds.), An Introduction to Intermediate and Advanced Statistical Analyses for Sport and Exercise Scientists. John Wiley and Sons, Ltd.
+Ahn, S., Lu, M., Lefevor, G.T., Fedewa, A. & Celimli, S. (2016). Application of meta-analysis in sport and exercise science. In N. Ntoumanis, & N. Myers (Eds.), \emph{An Introduction to Intermediate and Advanced Statistical Analyses for Sport and Exercise Scientists} (pp.233-253). Hoboken, NJ: John Wiley and Sons, Ltd.
 
-Wei, Yinghui, and Julian Higgins. Estimating within study covariances in multivariate meta analysis with multiple outcomes. Statistics in Medicine 32.7 (2013): 1191 1205.
+Wei, Y., &  Higgins, J. (2013). Estimating within study covariances in multivariate meta-analysis with multiple outcomes. \emph{Statistics in Medicine, 32}(7), 119-1205.
 }
 
 \examples{

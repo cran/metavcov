@@ -10,11 +10,11 @@ Min Lu (Maintainer,<m.lu6@umiami.edu>)
 }
 
 \references{
-Ahn, S., Lu, M., Lefevor, G.T., Fedewa, A. and Celimli, S. (2016). Chapter 11. Application of meta analysis in sport and exercise science. (pp. 233 253) In Ntoumanis, N. and Myers, N. (Eds.), An Introduction to Intermediate and Advanced Statistical Analyses for Sport and Exercise Scientists. John Wiley and Sons, Ltd.
+Ahn, S., Lu, M., Lefevor, G.T., Fedewa, A. & Celimli, S. (2016). Application of meta-analysis in sport and exercise science. In N. Ntoumanis, & N. Myers (Eds.), \emph{An Introduction to Intermediate and Advanced Statistical Analyses for Sport and Exercise Scientists} (pp.233-253). Hoboken, NJ: John Wiley and Sons, Ltd.
 
-Olkin, Ingram. Asymptotic distribution of functions of a correlation matrix. Essays in provability and statistics: A volume in honor of Professor Junjiro Ogawa (1976).
+Olkin, I., & Ishii, G. (1976). Asymptotic distribution of functions of a correlation matrix. In S. Ikeda (Ed.), \emph{Essays in probability and statistics: A volume in honor of Professor Junjiro Ogawa} (pp.5-51). Tokyo, Japan: Shinko Tsusho.
 
-Wei, Yinghui, and Julian Higgins. Estimating within study covariances in multivariate meta analysis with multiple outcomes. Statistics in Medicine 32.7 (2013): 1191 1205.
+Wei, Y., &  Higgins, J. (2013). Estimating within study covariances in multivariate meta-analysis with multiple outcomes. \emph{Statistics in Medicine, 32}(7), 119-1205.
 }
 
 \examples{

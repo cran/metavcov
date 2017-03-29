@@ -20,19 +20,21 @@ r.vcov(n,corflat,method="average")
   How to arrange correlation coefficients of each study from matrix to vector is in Cooper et al book page 385 to 386. Details for average method are in book of Cooper et al page 388.
 }
 \value{
-    \tabular{ll}{
-  list.rcov \tab A list of computed Variance-covariance matrices.\cr
-  rcov \tab A matrix whose rows are computed Variance-covariance vectors.\cr
-  zr \tab Z transformed correlation coefficients from input "corflat".\cr
-  list.rcov \tab A list of computed Variance-covariance matrices from z transformed correlation coefficients.\cr
-  zcov \tab A matrix whose rows are computed Variance-covariance vectors from z transformed correlation coefficients.\cr}}
+\item{list.rcov }{ A list of computed Variance-covariance matrices.}
+\item{rcov }{ A matrix whose rows are computed Variance-covariance vectors.}
+\item{zr }{ Z transformed correlation coefficients from input "corflat".}
+\item{list.rcov }{ A list of computed Variance-covariance matrices from z transformed correlation coefficients.}
+\item{zcov }{ A matrix whose rows are computed Variance-covariance vectors from z transformed correlation coefficients.}}
 
 \references{
-Ahn, S., Lu, M., Lefevor, G.T., Fedewa, A. and Celimli, S. (2016). Chapter 11. Application of meta-analysis in sport and exercise science. (pp. 233 253) In Ntoumanis, N. and Myers, N. (Eds.), An Introduction to Intermediate and Advanced Statistical Analyses for Sport and Exercise Scientists. John Wiley and Sons, Ltd.
+Ahn, S., Lu, M., Lefevor, G.T., Fedewa, A. & Celimli, S. (2016). Application of meta-analysis in sport and exercise science. In N. Ntoumanis, & N. Myers (Eds.), \emph{An Introduction to Intermediate and Advanced Statistical Analyses for Sport and Exercise Scientists} (pp.233-253). Hoboken, NJ: John Wiley and Sons, Ltd.
 
-Cooper, Harris, Larry V. Hedges, and Jeffrey C. Valentine, eds. The handbook of research synthesis and meta-analysis. Russell Sage Foundation, 2009.
+Cooper, H., Hedges, L.V., & Valentine, J.C. (Eds.) (2009). \emph{The handbook of research synthesis and 
+meta-analysis.} New York: Russell Sage Foundation.
 
-Olkin, Ingram. Asymptotic distribution of functions of a correlation matrix. Essays in provability and statistics: A volume in honor of Professor Junjiro Ogawa (1976).
+Olkin, I., & Ishii, G. (1976). Asymptotic distribution of functions of a correlation matrix. In S. Ikeda (Ed.), 
+\emph{Essays in probability and statistics: A volume in honor of Professor Junjiro Ogawa} (pp.5-51). Tokyo, 
+Japan: Shinko Tsusho.
 }
 
 \examples{
