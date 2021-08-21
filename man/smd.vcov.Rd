@@ -5,7 +5,7 @@
 Min Lu
 }
 \usage{
-smd.vcov(nt,nc,d,r,n_rt=0,n_rc=0)
+smd.vcov(nt, nc, d, r, n_rt = 0, n_rc = 0)
 }
 \description{
  Compute variance-covariance matrix for multivariate meta-analysis when effect size is standardized mean difference.
@@ -38,21 +38,21 @@ Wei, Y., &  Higgins, J. (2013). Estimating within study covariances in multivari
 ######################################################
 data(Geeganage2010)
 ## set the correlation coefficients list r
-r12=0.71
-r.Gee=lapply(1:nrow(Geeganage2010),function(i){matrix(c(1,r12,r12,1),2,2)})
+r12 <- 0.71
+r.Gee <- lapply(1:nrow(Geeganage2010), function(i){matrix(c(1, r12, r12, 1), 2, 2)})
 
-computvocv<-smd.vcov(nt=subset(Geeganage2010, select=c(nt_SBP,nt_DBP)),
-               nc=subset(Geeganage2010, select=c(nc_SBP,nc_DBP)),
-               d=subset(Geeganage2010, select=c(SMD_SBP,SMD_DBP)),r=r.Gee)
+computvocv <- smd.vcov(nt = subset(Geeganage2010, select = c(nt_SBP, nt_DBP)),
+               nc = subset(Geeganage2010, select = c(nc_SBP, nc_DBP)),
+               d = subset(Geeganage2010, select = c(SMD_SBP, SMD_DBP)), r = r.Gee)
 # name variance-covariance matrix as covars
-covars = computvocv$smd.cov
+covars <- computvocv$smd.cov
 #####################################################
 # Running random-effects model using package "mvmeta"
 #####################################################
 #library(mvmeta)
-#mvmeta_RE = summary(mvmeta(cbind(SMD_SBP,SMD_DBP),
-#                     S=covars,
-#                     data=subset(Geeganage2010,select=c(SMD_SBP,SMD_DBP)),
-#                     method="reml"))
+#mvmeta_RE <- summary(mvmeta(cbind(SMD_SBP, SMD_DBP),
+#                     S = covars,
+#                     data = subset(Geeganage2010, select = c(SMD_SBP, SMD_DBP)),
+#                     method = "reml"))
 #mvmeta_RE
 }
