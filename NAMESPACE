@@ -1,3 +1,20 @@
 exportPattern("^[[:alpha:]]+")
 importFrom("stats", "weighted.mean")
-import(corpcor)
+importFrom("stats", "pchisq", "pnorm", "qnorm", "symnum")
+importFrom("utils", "install.packages", "installed.packages")
+import(mice)
+import(ggplot2)
+export(ciplotgg, 
+       maketable,
+       print.summary.metafixed,
+       print.summary.metami,
+       rToz, 
+       rubinpool,
+       smTovec,
+       summary.metafixed,
+       summary.metami,
+       vecTosm)
+S3method(summary, metafixed)
+S3method(summary, metami)
+S3method(print, summary.metafixed)
+S3method(print, summary.metami)

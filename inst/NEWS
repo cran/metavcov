@@ -1,0 +1,26 @@
+-----------------------------------
+
+### Changes in metavcov 2.1.1 (Oct 2021)
+
+
+#### Major changes
+
+    * Data visualization function plotCI is added.
+      
+    * Multiple imputation function metami is added.
+      
+    * The output values for many functions are modified to be more consistent. All the .vcov function have three consistent output values: ef, list.vcov and matrix.vcov
+      
+#### Minor changes
+
+    * Suggested packages are added including mvmeta and metaSEM.
+    
+    * Updated references.
+
+    * Single imputation for missing data is added for .vcov functions.
+
+-----------------------------------
+
+### First version in R CRAN metavcov 1.0.1 in 2017
+
+-----------------------------------
