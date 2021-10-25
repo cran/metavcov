@@ -1,6 +1,7 @@
 smd.vcov <- function(nt, nc, d, r, n_rt = NA, n_rc = NA, name = NULL){
-  if (length(as.vector(d)) == length(as.matrix(d)[, 1]))   {colum.number <- 1}  else {colum.number <- ncol(d)}
-  if (length(r) == 1)   {K <- 1}    else   {    K <- nrow(d)}
+  if (length(as.vector(d)) == length(as.matrix(d)[, 1]))   {
+    colum.number <- 1}  else {colum.number <- ncol(d)}
+  if (length(r) == 1)   {K <- 1} else  { K <- nrow(d)}
   col.vac.number <- (colum.number + 1)*colum.number/2
   if (is.null(name)){
     if (is.null(colnames(d))) {
@@ -22,7 +23,8 @@ smd.vcov <- function(nt, nc, d, r, n_rt = NA, n_rc = NA, name = NULL){
 
   list.corr.st.varcovar <- list.corr.st.varcovar.d <- list()
 
-  if (is.na(n_rt)&(length(n_rt) == 1)){ n_rt <- rep(list(matrix(NA, colum.number, colum.number)), K) }
+  if (is.na(n_rt)&(length(n_rt) == 1)){
+    n_rt <- rep(list(matrix(NA, colum.number, colum.number)), K) }
 
       for (k in 1:K) {
        for (i in 1:colum.number){
@@ -33,7 +35,8 @@ smd.vcov <- function(nt, nc, d, r, n_rt = NA, n_rc = NA, name = NULL){
       }
      }
 
-  if (is.na(n_rc)&(length(n_rc) == 1)){ n_rc <- rep(list(matrix(NA, colum.number, colum.number)), K) }
+  if (is.na(n_rc)&(length(n_rc) == 1)){
+    n_rc <- rep(list(matrix(NA, colum.number, colum.number)), K) }
 
   for (k in 1:K) {
     for (i in 1:colum.number){
@@ -60,10 +63,16 @@ smd.vcov <- function(nt, nc, d, r, n_rt = NA, n_rc = NA, name = NULL){
           vj <- nc[k,j] + nt[k,j] - 2
           jvj <- J(vj)
           g[k, i] <- d[k, i]/jvi
-          ki <- (2*nt[k, i] - 2)/((nc[k, i] + nt[k, i] - 2)^2) + (2*nc[k, i] - 2)/((nc[k, i] + nt[k, i] - 2)^2)
-          kj <- (2*nt[k, j] - 2)/((nc[k, j] + nt[k, j] - 2)^2) + (2*nc[k, j] - 2)/((nc[k, j] + nt[k, j] - 2)^2)
-          kij <- 2*(nt[k, i]*nt[k, j]/(nt[k, i] + nt[k, j] - 1) + nc[k, i]*nc[k, j]/(nc[k, i] + nc[k,j] - 1) - 2)/(nc[k, i] + nt[k, i] - 2)/(nc[k, j] + nt[k, j] - 2)
-          temp <- (n_rc[[k]][i, j]/nc[k, i]/nc[k, j] + n_rt[[k]][i, j]/nt[k, i]/nt[k, j])*r[[k]][i, j] + kij*((r[[k]][i, j])^2)*d[k, i]*d[k, j]*jvi*jvj*sqrt((vi/(vi - 2) - 1/(jvi^2))*(vj/(vj - 2) - 1/(jvj^2)))/sqrt(ki*kj)
+          ki <- (2*nt[k, i] - 2)/((nc[k, i] + nt[k, i] - 2)^2) +
+                  (2*nc[k, i] - 2)/((nc[k, i] + nt[k, i] - 2)^2)
+          kj <- (2*nt[k, j] - 2)/((nc[k, j] + nt[k, j] - 2)^2) +
+                  (2*nc[k, j] - 2)/((nc[k, j] + nt[k, j] - 2)^2)
+          kij <- 2*(nt[k, i]*nt[k, j]/(nt[k, i] + nt[k, j] - 1) +
+                      nc[k, i]*nc[k, j]/(nc[k, i] + nc[k,j] - 1) - 2)/(nc[k, i] + nt[k, i] - 2)/(nc[k, j] + nt[k, j] - 2)
+          temp <- (n_rc[[k]][i, j]/nc[k, i]/nc[k, j] +
+                     n_rt[[k]][i, j]/nt[k, i]/nt[k, j])*r[[k]][i, j] +
+                      kij*((r[[k]][i, j])^2)*d[k, i]*d[k, j]*jvi*jvj*sqrt((vi/(vi - 2) -
+                        1/(jvi^2))*(vj/(vj - 2) - 1/(jvj^2)))/sqrt(ki*kj)
           list.corr.st.varcovar[[k]][i, j] <- unlist(temp)
 
           nT <- max(nt[k, i], nt[k, j])
@@ -73,8 +82,10 @@ smd.vcov <- function(nt, nc, d, r, n_rt = NA, n_rc = NA, name = NULL){
         }
       }
     }
-    corr.st.varcovar <- matrix(unlist(lapply(1:K, function(k){smTovec(list.corr.st.varcovar[[k]])})), K, col.vac.number, byrow = TRUE)
-    corr.st.varcovar.d <- matrix(unlist(lapply(1:K, function(k){smTovec(list.corr.st.varcovar.d[[k]])})), K, col.vac.number, byrow = TRUE)
+    corr.st.varcovar <- matrix(unlist(lapply(1:K, function(k){
+         smTovec(list.corr.st.varcovar[[k]])})), K, col.vac.number, byrow = TRUE)
+    corr.st.varcovar.d <- matrix(unlist(lapply(1:K, function(k){
+         smTovec(list.corr.st.varcovar.d[[k]])})), K, col.vac.number, byrow = TRUE)
     colnames(corr.st.varcovar) <- colnames(corr.st.varcovar.d) <- cov.name
     list(ef = as.data.frame(g),
          list.vcov = list.corr.st.varcovar,

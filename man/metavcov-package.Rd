@@ -14,7 +14,7 @@ Ahn, S., Lu, M., Lefevor, G.T., Fedewa, A. & Celimli, S. (2016). Application of 
 
 Olkin, I., & Ishii, G. (1976). Asymptotic distribution of functions of a correlation matrix. In S. Ikeda (Ed.), \emph{Essays in probability and statistics: A volume in honor of Professor Junjiro Ogawa} (pp.5-51). Tokyo, Japan: Shinko Tsusho.
 
-B. J. Becker. (2009) Model-based meta-analysis. In H. Cooper, L. V. Hedges, and J. C. Valentine, (Ed.), \emph{The handbook of research synthesis and meta-analysis}, chapter 20, pages 377-395. Russell Sage Foundation,
+B. J. Becker. (2009) Model-based meta-analysis. In H. Cooper, L. V. Hedges, and J. C. Valentine, (Ed.), \emph{The handbook of research synthesis and meta-analysis}, chapter 20, pages 377-395. Russell Sage Foundation.
 
 Wei, Y., &  Higgins, J. (2013). Estimating within study covariances in multivariate meta-analysis with multiple outcomes. \emph{Statistics in Medicine, 32}(7), 119-1205.
 }

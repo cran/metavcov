@@ -30,10 +30,9 @@ The function \code{smd_lgor} computes covariance between standardized mean diffe
 }
 
 \value{
- \tabular{ll}{
-  g \tab Computed Hedge's g from the input argument \code{d} for outcome 1.\cr
-  lgor \tab Computed log odds ratio for outcome 2.\cr
-  v \tab Computed covariance.\cr}
+\item{g}{Computed Hedge's g from the input argument \code{d} for outcome 1.}
+\item{lgor}{Computed log odds ratio for outcome 2.}
+\item{v}{Computed covariance.}
 }
 
 

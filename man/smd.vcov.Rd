@@ -21,13 +21,12 @@ The function \code{lgOR.vcov} computes effect sizes and variance-covariance matr
 }
 
 \value{
-    \tabular{ll}{
-  ef \tab A \eqn{N \times p}{N x p} data frame that transforms the input argument \code{d} into Hedges's g (Wei and Higgins, 2013).\cr
-  list.vcov \tab A \eqn{N}-dimensional list of \eqn{p(p+1)/2 \times p(p+1)/2}{p(p+1)/2 x p(p+1)/2} variance-covariance matrices for Hedges's g (Wei and Higgins, 2013).\cr
-  matrix.vcov \tab A \eqn{N \times p(p+1)/2}{N x p(p+1)/2} whose rows are computed variance-covariance vectors for Hedges's g (Wei and Higgins, 2013).\cr
-  list.dvcov \tab A \eqn{N}-dimensional list of \eqn{p(p+1)/2 \times p(p+1)/2}{p(p+1)/2 x p(p+1)/2} variance-covariance matrices for SMD (Olkin and Gleser, 2009).\cr
-  matrix.dvcov \tab A \eqn{N \times p(p+1)/2}{N x p(p+1)/2} matrix whose rows are computed variance-covariance vectors for SMD (Olkin and Gleser, 2009).\cr
-  }}
+\item{ef}{ A \eqn{N \times p}{N x p} data frame that transforms the input argument \code{d} into Hedges's g (Wei and Higgins, 2013).}
+\item{list.vcov}{ A \eqn{N}-dimensional list of \eqn{p(p+1)/2 \times p(p+1)/2}{p(p+1)/2 x p(p+1)/2} variance-covariance matrices for Hedges's g (Wei and Higgins, 2013).}
+\item{matrix.vcov}{A \eqn{N \times p(p+1)/2}{N x p(p+1)/2} whose rows are computed variance-covariance vectors for Hedges's g (Wei and Higgins, 2013).}
+\item{list.dvcov}{A \eqn{N}-dimensional list of \eqn{p(p+1)/2 \times p(p+1)/2}{p(p+1)/2 x p(p+1)/2} variance-covariance matrices for SMD (Olkin and Gleser, 2009).}
+\item{matrix.dvcov}{A \eqn{N \times p(p+1)/2}{N x p(p+1)/2} matrix whose rows are computed variance-covariance vectors for SMD (Olkin and Gleser, 2009).}
+  }
 
 
 \references{

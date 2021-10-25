@@ -29,9 +29,8 @@ The function \code{md_lgrr} computes covariance between mean difference and log 
 }
 
 \value{
- \tabular{ll}{
-  lgrr \tab Log risk ratio for outcome 2.\cr
-  v \tab Computed covariance.\cr}
+\item{lgrr}{Log risk ratio for outcome 2.}
+\item{v}{Computed covariance.}
 }
 
 

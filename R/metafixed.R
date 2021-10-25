@@ -67,7 +67,8 @@ print.summary.metafixed <- function(x, ...){
 digits <- 4
 cat("Fixed-effects coefficients","\n",sep="")
 signif <- symnum(x$coefficients[,"Pr(>|z|)"],corr=FALSE,na=FALSE,
-                 cutpoints=c(0, 0.001,0.01,0.05,0.1,1),symbols=c("***","**","*","."," "))
+                 cutpoints=c(0, 0.001,0.01,0.05,0.1,1),
+                 symbols=c("***","**","*","."," "))
 ###########################################################################
 # Summary table
 #

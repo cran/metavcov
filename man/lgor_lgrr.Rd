@@ -32,10 +32,9 @@ The function \code{lgor_lgrr} computes covariance between log odds ratio and log
 }
 
 \value{
- \tabular{ll}{
-  lgor \tab Log odds ratio for outcome 1.\cr
-  lgrr \tab Log risk ratio for outcome 2.\cr
-  v \tab Computed covariance.\cr}
+\item{lgor}{Log odds ratio for outcome 1.}
+\item{lgrr}{Log risk ratio for outcome 2.}
+\item{v}{Computed covariance.}
 }
 
 

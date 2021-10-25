@@ -30,10 +30,9 @@ The function \code{smd_lgrr} computes covariance between standardized mean diffe
 }
 
 \value{
- \tabular{ll}{
-  g \tab Computed Hedge's g from the input argument \code{d} for outcome 1.\cr
-  lgrr \tab Computed log risk ratio for outcome 2.\cr
-  v \tab Computed covariance.\cr}
+\item{g}{Computed Hedge's g from the input argument \code{d} for outcome 1.}
+\item{lgrr}{Computed log risk ratio for outcome 2.}
+\item{v}{Computed covariance.}
 }
 
 

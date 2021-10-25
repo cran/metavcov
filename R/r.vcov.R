@@ -17,7 +17,9 @@ vecTosm <- function (vec, diag = FALSE)
   return(m)
 }
 
-r.vcov <- function(n, corflat, zscore = FALSE, name = NULL, method = "average", na.impute = NA)
+r.vcov <- function(n, corflat,
+                   zscore = FALSE, name = NULL,
+                   method = "average", na.impute = NA)
 {
   if (zscore == TRUE) {corflat <- tanh(corflat)}
   colum.number <- ncol(corflat)
@@ -48,13 +50,15 @@ r.vcov <- function(n, corflat, zscore = FALSE, name = NULL, method = "average", 
   else
   { K <- nrow(corflat)}
 
-  temp <- unlist(lapply(1:colum.number, function(i, corflat,n){weighted.mean(corflat[, i], n, na.rm = TRUE)}, corflat = corflat, n = n))
+  temp <- unlist(lapply(1:colum.number, function(i){
+            weighted.mean(corflat[, i], n, na.rm = TRUE)}))
   corflat.m <- matrix(rep(temp, K), K, colum.number, byrow = "TRUE")
 
-  if (is.na(na.impute)) { corflat[is.na(corflat)] <- na.impute }
-  else if (na.impute == "average") { corflat[is.na(corflat)] <- corflat.m[is.na(corflat)]} else {
+  if (is.na(na.impute)) {
     corflat[is.na(corflat)] <- na.impute
-  }
+      } else if (na.impute == "average") {
+        corflat[is.na(corflat)] <- corflat.m[is.na(corflat)]} else {
+             corflat[is.na(corflat)] <- na.impute }
   rr.corflat <- corflat
 
   col.vac.number <- (colum.number+1)*colum.number/2
@@ -79,7 +83,8 @@ r.vcov <- function(n, corflat, zscore = FALSE, name = NULL, method = "average", 
   if (method == "average"){
     corflat <- corflat.m
 
-    temp <- unlist(lapply(1:colum.number, function(i, corflat,n){weighted.mean(corflat[,i], n, na.rm = TRUE)}, corflat = zz.corflat, n = n))
+    temp <- unlist(lapply(1:colum.number, function(i, corflat,n){
+      weighted.mean(corflat[,i], n, na.rm = TRUE)}, corflat = zz.corflat, n = n))
     z.corflat <- matrix(rep(temp, K), K, colum.number, byrow = "TRUE")
   }
 
@@ -127,7 +132,8 @@ r.vcov <- function(n, corflat, zscore = FALSE, name = NULL, method = "average", 
 
       rcov[k, ii] <- (0.5*r[sub[ii,]$s,sub[ii,]$t]*r[sub[ii,]$u, sub[ii,]$v]*((r[sub[ii,]$s,sub[ii,]$u])^2
                                                                                       + (r[sub[ii,]$s,sub[ii,]$v])^2
-                                                                                      + (r[sub[ii,]$t,sub[ii,]$u])^2+(r[sub[ii,]$t,sub[ii,]$v])^2) + r[sub[ii,]$s,sub[ii,]$u]*r[sub[ii,]$t,sub[ii,]$v]
+                                                                                      + (r[sub[ii,]$t,sub[ii,]$u])^2+(r[sub[ii,]$t,sub[ii,]$v])^2)
+                      + r[sub[ii,]$s,sub[ii,]$u]*r[sub[ii,]$t,sub[ii,]$v]
                                + r[sub[ii,]$s, sub[ii,]$v]*r[sub[ii,]$t, sub[ii,]$u]
                                - (r[sub[ii,]$s, sub[ii,]$t]*r[sub[ii,]$s, sub[ii,]$u]*r[sub[ii,]$s, sub[ii,]$v]
                                  + r[sub[ii,]$t, sub[ii,]$s]*r[sub[ii,]$t, sub[ii,]$u]*r[sub[ii,]$t, sub[ii,]$v]
@@ -148,12 +154,14 @@ r.vcov <- function(n, corflat, zscore = FALSE, name = NULL, method = "average", 
   }
 
   temp <- list.zcov
-  list.zcov <- lapply(1:K, function(k, temp, n){tempp <- diag(temp[[k]])
-                                                         diag(temp[[k]]) <- tempp*(n[k]/(n[k] - 3))  # confirm this is the same as 1/(n[k] - 3)
-                                                         colnames(temp[[k]]) <- rownames(temp[[k]]) <- name
-                                                         temp[[k]]}, temp <- temp, n = n)
+  list.zcov <- lapply(1:K, function(k){
+                 tempp <- diag(temp[[k]])
+                 diag(temp[[k]]) <- tempp*(n[k]/(n[k] - 3))  # confirm this is the same as 1/(n[k] - 3)
+                 colnames(temp[[k]]) <- rownames(temp[[k]]) <- name
+                 temp[[k]]})
 
-  zcov <- matrix(unlist(lapply(1:K, function(k, list.zcov){smTovec(list.zcov[[k]])}, list.zcov = list.zcov)), K, col.vac.number, byrow = TRUE)
+  zcov <- matrix(unlist(lapply(1:K, function(k){
+            smTovec(list.zcov[[k]])})), K, col.vac.number, byrow = TRUE)
 
   colnames(rcov) <- colnames(zcov) <- cov.name
 
@@ -163,5 +171,4 @@ r.vcov <- function(n, corflat, zscore = FALSE, name = NULL, method = "average", 
               ef = as.data.frame(zz.corflat),
               matrix.vcov = zcov,
               list.vcov = list.zcov))
-
 }

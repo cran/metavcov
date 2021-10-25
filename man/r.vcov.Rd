@@ -24,7 +24,7 @@ The function \code{r.vcov} computes variance-covariance matrix for multivariate 
 \details{
 How to arrange correlation coefficients of each study from matrix to vector is in Cooper et al book page 385 to 386. Details for average method are in book of Cooper et al page 388. Let \eqn{r_{ist}} denote the sample correlation coefficient that describes the relationship between variables \eqn{s} and \eqn{t} in study \eqn{i}. We can calculate its variance as
 \eqn{var({{r}_{ist}})={{(1-\rho_{ist}^{2})}^{2}}/{{n}_{i}},} and the covariance between two correlation coefficients is
-\deqn{
+\eqn{
 	cov({{r}_{ist}},{{r}_{iuv}})=[.5{{\rho }_{ist}}{{\rho }_{iuv}}({{\rho }}_{isu}^{2}+{{\rho }}_{isv}^{2}+{{\rho }}_{itu}^{2}+{{\rho }}_{itv}^{2})+{{\rho }_{isu}}{{\rho }_{itv}}+{{\rho }_{isv}}{{\rho }_{itu}} \nonumber \\
 	 -({{\rho }_{ist}}{{\rho }_{isu}}{{\rho }_{isv}}+{{\rho }_{its}}{{\rho }_{itu}}{{\rho }_{itv}}+{{\rho }_{ius}}{{\rho }_{iut}}{{\rho }_{iuv}}+{{\rho }_{ivs}}{{\rho }_{ivt}}{{\rho }_{ivu}})]/{{n}_{i}},
 }

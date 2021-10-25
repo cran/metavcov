@@ -31,10 +31,9 @@ The function \code{lgor_rd} computes covariance between log odds ratio and risk 
 }
 
 \value{
- \tabular{ll}{
-  lgor \tab Log odds ratio for outcome 1.\cr
-  rd \tab Risk difference for outcome 2.\cr
-  v \tab Computed covariance.\cr}
+\item{lgor}{Log odds ratio for outcome 1.}
+\item{rd}{Risk difference for outcome 2.}
+\item{v}{Computed covariance.}
 }
 
 

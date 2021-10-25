@@ -30,10 +30,9 @@ The function \code{smd_rd} computes covariance between standardized mean differe
 }
 
 \value{
- \tabular{ll}{
-  g \tab Computed Hedge's g from the input argument \code{d} for outcome 1.\cr
-  rd \tab Computed risk difference for outcome 1.\cr
-  v \tab Computed covariance.\cr}
+\item{g}{Computed Hedge's g from the input argument \code{d} for outcome 1.}
+\item{rd}{Computed risk difference for outcome 1.}
+\item{v}{Computed covariance.}
 }
 
 

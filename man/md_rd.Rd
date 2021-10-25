@@ -29,9 +29,8 @@ The function \code{lgor_rd} computes covariance between mean difference and risk
 }
 
 \value{
- \tabular{ll}{
-  rd \tab Computed risk difference for outcome 2.\cr
-  v \tab Computed covariance.\cr}
+\item{rd}{Computed risk difference for outcome 2.}
+\item{v}{Computed covariance.}
 }
 
 

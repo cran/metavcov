@@ -28,9 +28,8 @@ The function \code{lgor_rd} computes covariance between mean difference and stan
 }
 
 \value{
- \tabular{ll}{
-  g \tab Computed Hedge's g from the input argument smd for outcome 2.\cr
-  v \tab Computed covariance.\cr}
+\item{g}{Computed Hedge's g from the input argument smd for outcome 2.}
+\item{v}{Computed covariance.}
 }
 
 

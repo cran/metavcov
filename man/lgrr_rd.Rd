@@ -33,10 +33,9 @@ The function \code{lgrr_rd} compute covariance between log risk ratio and risk d
 }
 
 \value{
- \tabular{ll}{
-  lgrr \tab Log risk ratio for outcome 1.\cr
-  rd \tab Risk difference for outcome 1.\cr
-  v \tab Computed covariance.\cr}
+\item{lgrr}{Log risk ratio for outcome 1.}
+\item{rd}{Risk difference for outcome 1.}
+\item{v}{Computed covariance.}
 }
 
 

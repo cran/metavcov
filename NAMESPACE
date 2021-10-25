@@ -2,13 +2,12 @@ exportPattern("^[[:alpha:]]+")
 importFrom("stats", "weighted.mean")
 importFrom("stats", "pchisq", "pnorm", "qnorm", "symnum")
 importFrom("utils", "install.packages", "installed.packages")
-import(mice)
 import(ggplot2)
-export(ciplotgg, 
+export(ciplotgg,
        maketable,
        print.summary.metafixed,
        print.summary.metami,
-       rToz, 
+       rToz,
        rubinpool,
        smTovec,
        summary.metafixed,
