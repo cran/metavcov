@@ -57,11 +57,11 @@ S <- computvcov$matrix.vcov
 y <- computvcov$ef
 MMA_FE <- summary(metafixed(y = y, Slist = computvcov$list.vcov))
 #######################################################################
-# Running random-effects model using package "mvmeta" or "metaSEM"
+# Running random-effects model using package "mixmeta" or "metaSEM"
 #######################################################################
-# Restricted maximum likelihood (REML) estimator from the mvmeta package
-#library(mvmeta)
-#mvmeta_RE <- summary(mvmeta(cbind(SMD_SBP, SMD_DBP),
+# Restricted maximum likelihood (REML) estimator from the mixmeta package
+#library(mixmeta)
+#mvmeta_RE <- summary(mixmeta(cbind(SMD_SBP, SMD_DBP)~1,
 #                     S = S,
 #                     data = y,
 #                     method = "reml"))

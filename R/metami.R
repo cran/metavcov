@@ -13,7 +13,7 @@ metami <- function(data, M = 20, vcov = "r.vcov",
                     n_rt = NA,
                     n_rc = NA,
                     r = NULL,
-                    func = "mvmeta",
+                    func = "mixmeta",
                     formula = NULL,
                     method = "fixed",
                     pool.seq = NULL,
@@ -120,6 +120,20 @@ if("mvmeta" %in% rownames(installed.packages()) == FALSE) {install.packages("mvm
       }
 
   } }
+if (func == "mixmeta") {
+  pool <- c("coefficients", "qstat")
+  if("mixmeta" %in% rownames(installed.packages()) == FALSE) {install.packages("mixmeta")}
+  if (is.null(formula)) {
+    stop("Formula must be specified for mixmeta") } else {
+      if (is.null(x.name)) {
+        o <- mixmeta::mixmeta(formula = formula, S = ef.v,
+                            data = ef, method = method) } else {
+                              xdat <- subset(dat.imp, select = x.name)
+                              o <- mixmeta::mixmeta(formula = formula, S = ef.v, method = method,
+                                                  data = data.frame(ef, xdat))
+                            }
+
+    } }
 if (func == "metafixed") {
   o <- metafixed(y = ef, Slist = ef.v)
   pool <- c("coefficients", "qstat")}

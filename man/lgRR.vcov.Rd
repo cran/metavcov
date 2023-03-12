@@ -58,10 +58,10 @@ S <- computvcov$matrix.vcov
 MMA_FE <- summary(metafixed(y = y, Slist = computvcov$list.vcov))
 MMA_FE
 #######################################################################
-# Running random-effects model using package "mvmeta" or "metaSEM"
+# Running random-effects model using package "mixmeta" or "metaSEM"
 #######################################################################
-#library(mvmeta)
-#mvmeta_RE = summary(mvmeta(cbind(lgRR.DD, lgRR.D),
+#library(mixmeta)
+#mvmeta_RE = summary(mixmeta(cbind(lgRR.DD, lgRR.D)~1,
 #                            S = S, data = as.data.frame(y),
 #                            method = "reml"))
 #mvmeta_RE

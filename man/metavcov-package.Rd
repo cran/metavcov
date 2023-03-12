@@ -4,7 +4,7 @@
 \docType{package}
 \title{Computing Variances and Covariances, Visualization and Missing Data Solution for Multivariate Meta Analysis}
 \description{
-The package \code{metavcov} computes variances and covariances for effect sizes as preparations for multivariate meta-analysis. Effect sizes include correlation (r), mean difference (MD), standardized mean difference (SMD), log odds ratio (logOR), log risk ratio (logRR), and risk difference (RD). Functions for plotting confidence intervals and multiple imputation for missing data are offered. It can fit a fixed-effect model for demonstration purposes; users are highly encouraged to use packages \code{mvmeta} and \code{metaSEM} for random-effect models. }
+The package \code{metavcov} computes variances and covariances for effect sizes as preparations for multivariate meta-analysis. Effect sizes include correlation (r), mean difference (MD), standardized mean difference (SMD), log odds ratio (logOR), log risk ratio (logRR), and risk difference (RD). Functions for plotting confidence intervals and multiple imputation for missing data are offered. It can fit a fixed-effect model for demonstration purposes; users are highly encouraged to use packages \code{mixmeta} and \code{metaSEM} for random-effect models. }
 \author{
 Min Lu (Maintainer,<m.lu6@umiami.edu>)
 }
@@ -37,9 +37,9 @@ S[1, ]
 ## fixed-effect model
 MMA_FE <- summary(metafixed(y = y, Slist = computvcov$list.vcov))
 MMA_FE
-# Restricted maximum likelihood (REML) estimator from the mvmeta package
-#library(mvmeta)
-#mvmeta_RE <- summary(mvmeta(cbind(C1, C2, C3, C4, C5, C6),
+# Restricted maximum likelihood (REML) estimator from the mixmeta package
+#library(mixmeta)
+#mvmeta_RE <- summary(mixmeta(cbind(C1, C2, C3, C4, C5, C6)~1,
 #                           S = S, data = y, method = "reml"))
 #mvmeta_RE
 
@@ -92,9 +92,9 @@ S <- computvcov$matrix.vcov
 S[1, ]
 ## fixed-effect model
 MMA_FE <- summary(metafixed(y = y, Slist = computvcov$list.vcov))
-# Restricted maximum likelihood (REML) estimator from the mvmeta package
-# library(mvmeta)
-# mvmeta_RE <- summary(mvmeta(cbind(MD.SBP, MD.DBP, RD.DD, lgOR.D) ~.,
+# Restricted maximum likelihood (REML) estimator from the mixmeta package
+# library(mixmeta)
+# mvmeta_RE <- summary(mixmeta(cbind(MD.SBP, MD.DBP, RD.DD, lgOR.D) ~1,
 #                            S = S, data = y, method = "reml"))
 # mvmeta_RE
 

@@ -52,11 +52,11 @@ y <- as.data.frame(subset(Geeganage2010, select = c(MD_SBP, MD_DBP)))
 MMA_FE <- summary(metafixed(y = y, Slist = computvcov$list.vcov))
 MMA_FE
 #######################################################################
-# Running random-effects model using package "mvmeta" or "metaSEM"
+# Running random-effects model using package "mixmeta" or "metaSEM"
 #######################################################################
-# Restricted maximum likelihood (REML) estimator from the mvmeta package
-#library(mvmeta)
-#mvmeta_RE <- summary(mvmeta(cbind(MD_SBP, MD_DBP), S = S,
+# Restricted maximum likelihood (REML) estimator from the mixmeta package
+#library(mixmeta)
+#mvmeta_RE <- summary(mixmeta(cbind(MD_SBP, MD_DBP)~1, S = S,
 #                         data = subset(Geeganage2010, select = c(MD_SBP, MD_DBP)),
 #                         method = "reml"))
 #mvmeta_RE

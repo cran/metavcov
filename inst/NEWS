@@ -1,5 +1,18 @@
 -----------------------------------
 
+### Changes in metavcov 2.1.4 (Mar 2023)
+
+
+#### Major changes
+
+    * The mixmeta package is used to replace its older version mvmeta.
+
+#### Minor changes
+
+    * Examples in help files are improved.
+
+-----------------------------------
+
 ### Changes in metavcov 2.1.2 (Oct 2021)
 
 

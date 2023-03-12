@@ -17,7 +17,7 @@ metami(data, M = 20, vcov = "r.vcov",
         st = NULL, sc = NULL,
         n_rt = NA, n_rc = NA,
         r = NULL,
-        func = "mvmeta",
+        func = "mixmeta",
         formula = NULL,
         method = "fixed",
         pool.seq = NULL,
@@ -55,9 +55,9 @@ The above variance is statistically principled since \eqn{V_W} reflects the samp
 \item{n_rt}{A \eqn{N}-dimensional list of \eqn{p \times p}{p x p} correlation matrices storing sample sizes in the treatment group reporting pairwise outcomes in the off-diagonal elements. See \code{\link{mix.vcov}} for details.}
 \item{n_rc}{ A list defined in a similar way as \code{n_rt} for the control group.}
 \item{r}{A \eqn{N}-dimensional list of \eqn{p \times p}{p x p} correlation matrices for the \eqn{p} outcomes from the \eqn{N} studies. See \code{\link{mix.vcov}} for details.}
-\item{func}{ A string defining the function to be used for fitting the meta-analysis. Options include \code{func = "metafixed"} for fixed-effect meta-analysis (see \code{\link{metafixed}} for details). \code{func = "mvmeta"}, for which the \code{mvmeta} package must be installed beforehand, and \code{func = "meta"}, for which the \code{metaSEM} package must be installed beforehand. }
-\item{formula}{ Formula used for the function  \code{func = "mvmeta"} from the \code{mvmeta} package when \code{func = "mvmeta"}. }
-\item{method}{ Method used for the function  \code{func = "mvmeta"} from the \code{mvmeta} package when \code{func = "mvmeta"}.}
+\item{func}{ A string defining the function to be used for fitting the meta-analysis. Options include \code{func = "metafixed"} for fixed-effect meta-analysis (see \code{\link{metafixed}} for details). \code{func = "mixmeta"}, for which the \code{mixmeta} package must be installed beforehand, and \code{func = "meta"}, for which the \code{metaSEM} package must be installed beforehand. }
+\item{formula}{ Formula used for the function  \code{func = "mixmeta"} from the \code{mixmeta} package when \code{func = "mixmeta"}. }
+\item{method}{ Method used for the function  \code{func = "mixmeta"} from the \code{mixmeta} package when \code{func = "mixmeta"}.}
 \item{pool.seq}{ A numeric vector indicating if the results are pooled from subsets of the \code{M} data sets. By default, the results are only pooled from all \code{M} data sets. }
 \item{return.mi}{ Should the \code{M} imputed data sets be returned?}
 \item{ci.level}{ Significant level for the pooled confidence intervals. The default is 0.05. }
@@ -131,14 +131,14 @@ plotCI(y = computvcov$ef, v = computvcov$list.vcov,
 # pooled results from M = 10 imputed data sets
 # o1$result.seq$M10$coefficients
 #########################################################################################
-# Running random-effects and meta-regression model using packages "mvmeta" or "metaSEM"
+# Running random-effects and meta-regression model using packages "mixmeta" or "metaSEM"
 #########################################################################################
-# Restricted maximum likelihood (REML) estimator from the mvmeta package
-# library(mvmeta)
+# Restricted maximum likelihood (REML) estimator from the mixmeta package
+# library(mixmeta)
 # o2 <- metami(dat, M = 10, vcov = "r.vcov",
 #                     n.name, ef.name,
-#                     formula = as.formula(cbind(C1, C2, C3, C4, C5, C6) ~ . ),
-#                     func = "mvmeta",
+#                     formula = as.formula(cbind(C1, C2, C3, C4, C5, C6) ~ 1),
+#                     func = "mixmeta",
 #                     method = "reml")
 # maximum likelihood estimators from the metaSEM package
 # library(metaSEM)
@@ -151,11 +151,11 @@ plotCI(y = computvcov$ef, v = computvcov$list.vcov,
 # o4 <- metami(dat, M = 10, vcov = "r.vcov",
 #                     n.name, ef.name, x.name = "p_male",
 #                     func = "meta")
-# library(mvmeta)
+# library(mixmeta)
 # o5 <- metami(dat, M = 20, vcov = "r.vcov",
 #               n.name, ef.name, x.name = "p_male",
 #               formula = as.formula(cbind(C1, C2, C3, C4, C5, C6) ~ p_male ),
-#               func = "mvmeta",
+#               func = "mixmeta",
 #               method = "reml")
 #####################################################################################
 # Example: Geeganage2010 data
