@@ -4,36 +4,16 @@ titl <- meta$Title
 year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date)
 vers <- paste("R package version", meta$Version)
 
-bibentry(bibtype="Manual",
-         title = titl,
-         author = c(person(family="Lu", given="M.")),
-	 publisher = "manual",
-         year         = year,
-         note         = vers,
-         url          = "https://cran.r-project.org/package=metavcov",
-         pdf          = "https://cran.r-project.org/web/packages/metavcov/metavcov.pdf",
+bibentry(bibtype="Article",
+         title  = "Computing Within-Study Covariances, Data Visualization and Missing Data Solutions for Multivariate Meta-Analysis with metavcov",
+         author =  c(person(family="Lu", given="M.")),
+         journal      = "Frontiers in Psychology",
+         year         = "2023",
+         volume       = "14",
+         pages        = "1185012",
+         url          = "https://www.frontiersin.org/articles/10.3389/fpsyg.2023.1185012",
          textVersion =
-         paste("Lu M. (",year ,"). ",
-               titl, ", ", vers, ".", sep=""))
-
-bibentry(bibtype="incollection",
-         title  = "Application of Meta-Analysis in Sport and Exercise Science",
-         chapter = 11,
-         author =  c(person(family="Ahn", given="S."),
-                    person(family="Lu", given="M."),
-                    person(family="Lefevor", given="G.T."),
-                    person(family="Fedewa", given="A.L."),
-                    person(family="Celimli", given="S.")),
-	 booktitle     = "An introduction to intermediate and advanced statistical analyses for sport and exercise scientists",
-	 editor      = c(person(family="Ntoumanis", given="N."),
-                    person(family="Myers", given="N.D.")),
-         year         = "2016",
-         pages        = "233--253",
-         publisher  = "John Wiley and Sons",
-         url          = "https://bcs.wiley.com/he-bcs/Books?action=index&bcsId=9985&itemId=1118962052",
-
-         textVersion =
-         paste("Ahn S., Lu M., Lefevor G.T., Fedewa A.L. and Celimli S. (2016). Application of Meta-Analysis in
-Sport and Exercise Science. In Ntoumanis N. and Myers N.D. (Eds.), An introduction to intermediate
-and advanced statistical analyses for sport and exercise scientists (pp. 233--253). John Wiley and Sons.",
+         paste("Lu M. (2023). ",
+               "Computing Within-Study Covariances, Data Visualization and Missing Data Solutions for Multivariate Meta-Analysis with metavcov. ",
+               "Frontiers in Psychology. 14:1185012.",
                sep=""))

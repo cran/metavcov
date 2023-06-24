@@ -1,5 +1,15 @@
 -----------------------------------
 
+### Changes in metavcov 2.1.5 (Jun 2023)
+
+
+#### Major changes
+
+    * The citation reference was changed.
+    Lu M (2023) Computing within-study covariances, data visualization, and missing data solutions for multivariate meta-analysis with metavcov. Front. Psychol. 14:1185012. doi: 10.3389/fpsyg.2023.1185012
+
+-----------------------------------
+
 ### Changes in metavcov 2.1.4 (Mar 2023)
 
 

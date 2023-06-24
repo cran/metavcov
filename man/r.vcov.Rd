@@ -39,14 +39,7 @@ where \eqn{\rho_{i..}} represents the population value. In practice, \eqn{\rho_{
 \item{matrix.vcov }{ A matrix \code{matrix.rvcov} for Fisher's \eqn{z} transformed correlation coefficients.}}
 
 \references{
-Ahn, S., Lu, M., Lefevor, G.T., Fedewa, A. & Celimli, S. (2016). Application of meta-analysis in sport and exercise science. In N. Ntoumanis, & N. Myers (Eds.), \emph{An Introduction to Intermediate and Advanced Statistical Analyses for Sport and Exercise Scientists} (pp.233-253). Hoboken, NJ: John Wiley and Sons, Ltd.
-
-Cooper, H., Hedges, L.V., & Valentine, J.C. (Eds.) (2009). \emph{The handbook of research synthesis and
-meta-analysis.} New York: Russell Sage Foundation.
-
-Olkin, I., & Ishii, G. (1976). Asymptotic distribution of functions of a correlation matrix. In S. Ikeda (Ed.),
-\emph{Essays in probability and statistics: A volume in honor of Professor Junjiro Ogawa} (pp.5-51). Tokyo,
-Japan: Shinko Tsusho.
+Lu, M. (2023). Computing within-study covariances, data visualization, and missing data solutions for multivariate meta-analysis with metavcov. \emph{Frontiers in Psychology}, 14:1185012.
 }
 
 \examples{

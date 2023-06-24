@@ -2,8 +2,8 @@ Package: metavcov
 Type: Package
 Title: Computing Variances and Covariances, Visualization and Missing
         Data Solution for Multivariate Meta-Analysis
-Version: 2.1.4
-Date: 2023-03-12
+Version: 2.1.5
+Date: 2023-06-22
 Author: Min Lu <m.lu6@umiami.edu>
 Maintainer: Min Lu <m.lu6@umiami.edu>
 BugReports: https://github.com/luminwin/metavcov/issues/new
@@ -15,6 +15,6 @@ License: GPL (>= 2)
 LazyData: TRUE
 URL: https://github.com/luminwin/metavcov
 NeedsCompilation: no
-Packaged: 2023-03-12 11:52:18 UTC; min
+Packaged: 2023-06-24 00:23:56 UTC; min
 Repository: CRAN
-Date/Publication: 2023-03-12 12:10:02 UTC
+Date/Publication: 2023-06-24 04:00:02 UTC
